@@ -1,0 +1,11 @@
+{
+  "globalDependencies": {
+    "angular": "registry:dt/angular#1.5.0+20161016133926",
+    "cordova/plugins/dialogs": "registry:dt/cordova/plugins/dialogs#0.0.0+20160316155526",
+    "jquery": "registry:dt/jquery#1.10.0+20160929162922",
+    "ng-cordova/camera": "registry:dt/ng-cordova/camera#0.0.0+20160316171810",
+    "ng-cordova/dialogs": "registry:dt/ng-cordova/dialogs#0.0.0+20160316171810",
+    "ng-cordova/geolocation": "registry:dt/ng-cordova/geolocation#0.0.0+20160316171810",
+    "ng-cordova/toast": "registry:dt/ng-cordova/toast#0.0.0+20160316171810"
+  }
+}

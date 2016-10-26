@@ -45,6 +45,23 @@ var MyApp;
         }());
         Services.ChatService = ChatService;
         angular.module('MyApp').service('chatService', ChatService);
+        var GeoService = (function () {
+            function GeoService() {
+            }
+            GeoService.prototype.signal = function (beep, vibrate) {
+                this.doBeep(beep);
+                this.doVibrate(vibrate);
+            };
+            GeoService.prototype.doVibrate = function (times) {
+                navigator.vibrate(times);
+            };
+            GeoService.prototype.doBeep = function (times) {
+                navigator.notification.beep(times);
+            };
+            return GeoService;
+        }());
+        Services.GeoService = GeoService;
+        angular.module('MyApp').service('geoService', GeoService);
     })(Services = MyApp.Services || (MyApp.Services = {}));
 })(MyApp || (MyApp = {}));
 //# sourceMappingURL=services.js.map

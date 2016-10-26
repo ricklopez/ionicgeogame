@@ -1,6 +1,6 @@
 ﻿namespace MyApp {
 
-    angular.module('MyApp', ['ionic', 'ui.router'])
+    angular.module('MyApp', ['ionic', 'ui.router', 'ngCordova'])
         .run(($ionicPlatform) => {
             $ionicPlatform.ready(() => {
                 // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -33,16 +33,16 @@
 
                 // Each tab has its own nav history stack:
 
-                .state('tab.dash', {
-                    url: '/dash',
-                    views: {
-                        'tab-dash': {
-                            templateUrl: '/ngApp/views/tab-dash.html',
-                            controller: MyApp.Controllers.DashController,
-                            controllerAs: 'controller'
-                        }
-                    }
-                })
+                //.state('tab.dash', {
+                //    url: '/dash',
+                //    views: {
+                //        'tab-dash': {
+                //            templateUrl: '/ngApp/views/tab-dash.html',
+                //            controller: MyApp.Controllers.DashController,
+                //            controllerAs: 'controller'
+                //        }
+                //    }
+                //})
 
                 .state('tab.chats', {
                     url: '/chats',
@@ -60,6 +60,17 @@
                         'tab-chats': {
                             templateUrl: '/ngApp/views/chat-detail.html',
                             controller: MyApp.Controllers.ChatDetailController,
+                            controllerAs: 'controller'
+                        }
+                    }
+                })
+
+                .state('tab.geolocation', {
+                    url: '/dash',
+                    views: {
+                        'tab-geolocation': {
+                            templateUrl: '/ngApp/views/tab-geolocation.html',
+                            controller: MyApp.Controllers.GeolocationController,
                             controllerAs: 'controller'
                         }
                     }

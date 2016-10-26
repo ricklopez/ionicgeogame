@@ -1,6 +1,6 @@
 var MyApp;
 (function (MyApp) {
-    angular.module('MyApp', ['ionic', 'ui.router'])
+    angular.module('MyApp', ['ionic', 'ui.router', 'ngCordova'])
         .run(function ($ionicPlatform) {
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -21,17 +21,7 @@ var MyApp;
             .state('tab', {
             url: '/tab',
             abstract: true,
-            templateUrl: 'templates/tabs.html'
-        })
-            .state('tab.dash', {
-            url: '/dash',
-            views: {
-                'tab-dash': {
-                    templateUrl: '/ngApp/views/tab-dash.html',
-                    controller: MyApp.Controllers.DashController,
-                    controllerAs: 'controller'
-                }
-            }
+            templateUrl: '/ngApp/views/tabs.html'
         })
             .state('tab.chats', {
             url: '/chats',
@@ -49,6 +39,16 @@ var MyApp;
                 'tab-chats': {
                     templateUrl: '/ngApp/views/chat-detail.html',
                     controller: MyApp.Controllers.ChatDetailController,
+                    controllerAs: 'controller'
+                }
+            }
+        })
+            .state('tab.geolocation', {
+            url: '/dash',
+            views: {
+                'tab-geolocation': {
+                    templateUrl: '/ngApp/views/tab-geolocation.html',
+                    controller: MyApp.Controllers.GeolocationController,
                     controllerAs: 'controller'
                 }
             }

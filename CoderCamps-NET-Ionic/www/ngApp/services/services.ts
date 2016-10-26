@@ -46,4 +46,21 @@
 
     angular.module('MyApp').service('chatService', ChatService);
 
+    export class GeoService {
+        public signal(beep, vibrate) {
+            this.doBeep(beep);
+            this.doVibrate(vibrate);
+        }
+
+        public doVibrate(times) {
+            navigator.vibrate(times);
+        }
+
+        public doBeep(times) {
+            navigator.notification.beep(times);
+        }
+    }
+
+    angular.module('MyApp').service('geoService', GeoService);
+
 }

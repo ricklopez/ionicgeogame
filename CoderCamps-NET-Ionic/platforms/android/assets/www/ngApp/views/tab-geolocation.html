@@ -1,0 +1,35 @@
+﻿<ion-view view-title="Dashboard">
+    <ion-content class="padding">
+        <h2>Welcome to Ionic GEO</h2>
+        <div>
+            <button ng-hide="controller.start" ng-click="controller.watchLocation()">Start Game</button>
+            <img ng-show="controller.start" ng-hide="controller.watchLat" src="http://www.mgpss-perc.com/content/allsites/html/home/layout1/images/loading.gif" />
+        </div>
+        
+        <div>
+            <h2 style="color: #387ef5;">Start</h2>
+            <div>
+                latitude: {{controller.lat}}
+            </div>
+            <div>
+                longitude: {{controller.long}}
+            </div>
+            <h2 style="color: #387ef5;">Current</h2>
+            <div>
+                latitude: {{controller.watchLat}}
+            </div>
+            <div>
+                longitude: {{controller.watchLong}}
+                
+            </div>
+            <h2 style="color: #387ef5;">To Statue of Liberty <span style="font-size:.74rem;">(40.689249, -74.044500)</span></h2>
+            <div>
+                latitude diff: {{controller.distanceLat}}
+            </div>
+            <div>
+                longitude diff: {{controller.distanceLat}}
+            </div>
+        </div>
+        
+    </ion-content>>
+</ion-view>
